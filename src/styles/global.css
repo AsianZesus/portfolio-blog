@@ -1,0 +1,262 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility classes */
+.container {
+  --max-width: 1050px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 4rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+  }
+}
+
+.even-proj-column {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-proj-column {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.even-row {
+  line-height: 1.2;
+}
+
+.padding-block-900 {
+  padding-block: 2rem;
+}
+
+.padding-block-900 > footer {
+  padding-block: 2rem;
+}
+
+/* General styling */
+
+body {
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.primary-header {
+  margin-top: 1rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-list > li > a {
+  /* text-decoration: none; */
+  color: hsl(0, 100%, 0%);
+}
+
+.nav-wrapper > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-blog {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 18px;
+}
+
+.nav-button {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  padding: 0em 0.2em;
+}
+
+.nav-button:hover,
+.nav-button-visible {
+  background-color: hsl(0, 0%, 90%);
+  border-color: hsl(0, 0%, 100%);
+}
+
+.arrow {
+  height: 3.5rem;
+}
+
+.button-plus {
+  border-radius: 10rem;
+}
+
+hr {
+  width: auto;
+  border-top: 1px solid hsl(0, 0%, 85%);
+  border-radius: 2vmax;
+}
+
+.subtext {
+  color: hsl(0, 0%, 44%);
+}
+
+.project-title {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.project-cont {
+  inline-size: 20rem;
+}
+
+.subtext-cont {
+  margin-top: 1rem;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-nav-button,
+.portfolio-nav-button {
+  text-decoration: none;
+  color: hsl(0, 100%, 0%);
+}
+
+.blog-contaier {
+  display: flex;
+}
+
+.blog-subtext {
+  font-size: 12px;
+  display: flex;
+  gap: 0.6rem;
+  text-decoration: underline;
+  text-underline-position: auto;
+}
+
+.blog-main-head-first {
+  font-size: 30px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(147, 89%, 48%);
+  border-radius: 0.2rem;
+  padding: 0.2em;
+  margin-bottom: 0.4em;
+}
+
+.blog-main-head-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blog-main-head-second {
+  font-size: 30px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(209, 89%, 65%);
+  border-radius: 0.2rem;
+  padding: 0.2em;
+  padding-right: 2.5rem;
+  margin-bottom: 0.4em;
+}
+
+.blog-arrow {
+  font-weight: 600;
+}
+
+footer {
+  margin-top: auto;
+}
+
+a {
+  color: hsl(0, 100%, 0%);
+}
+
+.blog-dot {
+  list-style-type: none;
+  font-size: 18px;
+}

@@ -1,16 +1,68 @@
 ---
-
+// component imports
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Portfolio">
+  <main>
+    <section class="padding-block-900">
+      <div class="container">
+        <h1>Projects</h1>
+        <div class="even-proj-column" style="margin-bottom: 0.8rem;">
+          <div class="project-cont | proj-one">
+            <a href="#" class="project-title">flood-app</a>
+            <h2 class="subtext">2023</h2>
+            <p class="proj-one-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae rerum voluptates saepe quo minima, ullam eos quae nobis
+              quia est repellendus.
+            </p>
+          </div>
+          <div class="project-cont | proj-two">
+            <a href="#" class="project-title">Project</a>
+            <h2 class="subtext">2023</h2>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </section>
+
+    <section class="padding-block-900">
+      <div class="container">
+        <div class="even-columns" style="margin-bottom: 0.8em;">
+          <div>
+            <h1>About</h1>
+            <div class="subtext-cont">
+              <p class="portfolio-subtext">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos repudiandae ipsum optio excepturi perspiciatis
+                dolorem similique cumque iusto sapiente! Dolorem aliquam
+                voluptates officia qui harum impedit, neque ea ipsum voluptate!
+                Eaque quo consequatur omnis dolorum rem! Iure perferendis quae
+                incidunt, illo, tenetur nesciunt enim amet eligendi veritatis
+                nam qui quis autem nulla blanditiis animi ut saepe sit,
+                doloribus aperiam corrupti!
+              </p>
+            </div>
+          </div>
+          <div>
+            <h1>Now</h1>
+            <div class="subtext-cont">
+              <p class="portfolio-subtext">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis quae magnam in officiis rem recusandae, nobis fuga!
+                Nostrum nemo dolorum, excepturi ad et voluptatibus ipsa
+                cupiditate, sit doloremque perferendis iusto?Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Adipisci illum nisi est
+                quidem quo dolores quam nesciunt quod qui illo rerum totam,
+                eveniet reprehenderit distinctio quos, accusantium odio
+                recusandae autem!
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </section>
+  </main>
+</MainLayout>
