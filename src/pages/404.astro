@@ -1,7 +1,22 @@
 ---
-import NotFoundLayout from "../layouts/404Layout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<NotFoundLayout title="Page Not Found">
-
-</NotFoundLayout>
+<MainLayout title="Page Not Found">
+  <div
+    class="container"
+    style={{
+      display: "grid",
+      placeItems: "center",
+      textAlign: "center",
+      gap: "1rem",
+      padding: "10rem"
+    }}
+  >
+  <div>
+    <h1 style="font-weight: bold;">Welp, this is awkward</h1>
+    <p>We seem to have miplaced something</p>
+  </div>
+  <a href="/">Go Home</a>
+  </div>
+</MainLayout>
