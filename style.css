@@ -1,5 +1,33 @@
+:root {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  --clr-foreground: hsl(0 0% 0%);
+  --clr-background: hsl(0 0% 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-background: hsl(0 0% 0%);
+    --clr-foreground: hsl(0 0% 100%);
+  }
+}
+
+.light-theme {
+  --clr-foreground: hsl(0 0% 0%);
+  --clr-background: hsl(0 0% 100%);
+}
+
+.dark-theme {
+  --clr-background: hsl(0 0% 0%);
+  --clr-foreground: hsl(0 0% 100%);
+}
+
 /* Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -18,8 +46,8 @@ html {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -36,22 +64,61 @@ body {
 }
 
 /* Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
 /* Create a root stacking context */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+body {
+  background: var(--clr-background);
+  color: var(--clr-foreground);
+}
+
+#theme-toggle {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  opacity: 0.8;
+  padding: 4rem;
+  border-radius: 50%;
+}
+
+#theme-toggle svg {
+  fill: var(--clr-foreground);
+}
+
+#theme-toggle:hover,
+#theme-toggle:focus {
+  opacity: 1;
+  background: hsl(0, 0%, 50% /0.15);
+}
+
+.toogle-circle {
+  transform: translateX(-15%);
 }
