@@ -1,5 +1,7 @@
 const themeToggle = document.querySelector("#theme-toggle");
+const localeTimeElement = document.querySelector("#localeTime");
 
+// Dark/Light Mode
 themeToggle.addEventListener("click", () => {
   document.body.classList.contains("light-theme")
     ? enableDarkMode()
@@ -27,3 +29,12 @@ function setThemePreference() {
 }
 
 document.onload = setThemePreference();
+
+// Time
+function time() {
+  setInterval(() => {
+    const fullTime = new Date();
+    localeTimeElement.textContent = fullTime.toLocaleTimeString();
+  }, 1000);
+}
+window.onload = time;

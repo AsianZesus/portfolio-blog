@@ -2,26 +2,50 @@
   font-family: "Hanken Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  color-scheme: dark light;
 
   --clr-foreground: hsl(0 0% 0%);
   --clr-background: hsl(0 0% 100%);
+
+  --text-light-primary: #121212;
+  --text-light-secondary: #828282;
+  --bg-light-primary: #ffffff;
+  --bg-light-secondary: #f8f8f8;
+  --bg-light-secondary-darker: #f0f0f0;
+
+  --text-primary: #ededed;
+  --text-secondary: #a0a0a0;
+  --bg-primary: #161616;
+  --bg-secondary: #1c1c1c;
+  --bg-secondary-darker: #393939;
+
+  --font-size-regular: 16px;
+  --font-size-large: 20px;
+  --font-size-xl: 32px;
+  --font-size-small: 14px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --clr-background: hsl(0 0% 0%);
-    --clr-foreground: hsl(0 0% 100%);
-  }
-}
 
 .light-theme {
   --clr-foreground: hsl(0 0% 0%);
   --clr-background: hsl(0 0% 100%);
+
+  h1 > span {
+    color: var(--bg-secondary-darker);
+  }
 }
 
 .dark-theme {
   --clr-background: hsl(0 0% 0%);
   --clr-foreground: hsl(0 0% 100%);
+
+  h1 {
+    color: var(--text-primary);
+  }
+
+  h1 > .hero-second-heading {
+    color: var(--text-secondary);
+  }
 }
 
 /* Use a more-intuitive box-sizing model */
@@ -217,3 +241,35 @@ body {
     transform: scale(1);
   }
 }
+
+/* Utility Classes */
+
+.text-color-primary {
+  color: var(--text-primary);
+}
+
+.text-color-light-primary {
+  color: var(--text-light-primary);
+}
+
+.text-color-secondary {
+  color: var(--text-secondary);
+}
+
+.text-white {
+  color: var(--bg-light-primary);
+}
+
+.text-small {
+  font-size: var(--font-size-small);
+}
+
+.text-regular {
+  font-size: var(--font-size-regular);
+}
+
+.text-large {
+  font-size: var(--font-size-large);
+}
+
+/* Contact classes */
