@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "year":"2023",
+            "name":"Lorem",
+            "category":"Lorem",
+            "type": "In-House",
+            "image": "link",
+            "link":"https://github.com/AsianZesus?tab=repositories",
+            "linklabel": "Live Site might not need this" 
+        },
+        {
+            "year":"2023",
+            "name":"Lorem",
+            "category":"Lorem",
+            "type": "In-House",
+            "image": "link",
+            "link":"https://github.com/AsianZesus?tab=repositories",
+            "linklabel": "Live Site might not need this" 
+        }
+    ]
+}
