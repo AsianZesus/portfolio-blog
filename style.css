@@ -273,3 +273,9 @@ body {
 }
 
 /* Contact classes */
+
+
+/* Spacing */
+.medium-margin-bottom {
+  margin-bottom: 6vh;
+}

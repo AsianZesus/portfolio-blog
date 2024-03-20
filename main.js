@@ -67,9 +67,27 @@ function projectsHeaders(obj) {
 
   projectsData.forEach((element) => {
     const myLink = document.createElement("a");
-    myLink.textContent = element.name;
+    const myImg = document.createElement("img");
+    const myDiv = document.createElement("div");
+    const myH2 = document.createElement("h2");
+    myH2.classList.add(
+      "text-color-primary",
+      "medium-margin-bottom",
+      "line-height-100"
+    );
+    const myP1 = document.createElement("p");
+    const myP2 = document.createElement("p");
+
+    myImg.textContent = element.image;
+    myH2.textContent = element.name;
+    myP1.textContent = element.description;
+    myP2.textContent = element.category;
+    myDiv.appendChild(myH2);
+    myDiv.appendChild(myP2);
+    myDiv.appendChild(myP1);
+    myLink.append(myDiv);
     // myLink.classList.add("text-large")
-    testData.append(myLink);
+    testData.append(myImg, myLink);
   });
 }
 

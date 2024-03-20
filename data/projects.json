@@ -6,17 +6,17 @@
             "category":"Web design",
             "type":"In-house",
             "image":"link",
-            "description":"Lorem",
+            "description":"1Lorem",
             "link":"https://github.com/AsianZesus?tab=repositories",
             "linklabel":"Live site"
         },
         {
             "year":"2023",
             "name":"Lorem",
-            "category":"Lorem",
+            "category":"2Lorem",
             "type": "In-House",
             "image": "link",
-            "description": "Lorem",
+            "description": "3Lorem",
             "link":"https://github.com/AsianZesus?tab=repositories",
             "linklabel": "Live Site might not need this" 
         }
